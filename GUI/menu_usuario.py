@@ -30,3 +30,13 @@ def menu_buscar():
         print ("Usuario não encontrado")
     else:
         imprimir_usuario(u)
+
+def menu_remover():
+    print ("\nRemover Usuario \n")
+    cpf = int(input("CPF: "))
+    print()
+    u = usuario.remover_usuario(cpf)
+    if (u == False):
+        print ("Usuario não encontrado")
+    else:
+        print ("Usuario removido")
