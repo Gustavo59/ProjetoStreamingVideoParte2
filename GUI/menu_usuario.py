@@ -14,3 +14,9 @@ def menu_adicionar():
     email = str(input("Email: "))
     senha = str(input("Senha: "))
     usuario.adicionar_usuario(cpf, nome, email, senha)
+
+def menu_listar():
+    print ("\nListar Usuarios \n")
+    usuarios = usuario.listar_usuarios()
+    for u in usuarios:
+        imprimir_usuario(u)
