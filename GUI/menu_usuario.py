@@ -20,3 +20,13 @@ def menu_listar():
     usuarios = usuario.listar_usuarios()
     for u in usuarios:
         imprimir_usuario(u)
+
+def menu_buscar():
+    print ("\nBuscar Usuario por CPF \n")
+    cpf = int(input("CPF: "))
+    print()
+    u = usuario.buscar_usuario(cpf)
+    if (u == None):
+        print ("Usuario não encontrado")
+    else:
+        imprimir_usuario(u)
