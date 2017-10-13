@@ -6,3 +6,11 @@ def imprimir_usuario(usuario):
     print ("Email: ",  usuario[2])
     print("Senha: ", usuario[3])
     print ()
+
+def menu_adicionar():
+    print ("\nAdicionar Usuarios \n")
+    cpf = int(input("CPF: "))
+    nome = str (input("Nome: "))
+    email = str(input("Email: "))
+    senha = str(input("Senha: "))
+    usuario.adicionar_usuario(cpf, nome, email, senha)
