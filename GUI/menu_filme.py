@@ -39,3 +39,33 @@ def menu_remover():
         print ("Filme não encontrado")
     else:
         print ("Filme removido")
+
+
+def mostrar_menu():
+    run_filme = True
+    menu = ("\n----------------\n"+
+             "(1) Adicionar novo Filme \n" +
+             "(2) Listar Filmes \n" +
+             "(3) Buscar Filme \n" +
+             "(4) Buscar Filmes por Gênero \n" +
+             "(5) Remover Usuario \n" +
+             "(0) Voltar\n"+
+            "----------------")
+    
+    while(run_filme):
+        print (menu)
+        op = int(input("Digite sua escolha: "))
+
+        if (op == 1):
+            menu_adicionar()
+        elif(op == 2):
+            menu_listar()
+        elif(op == 3):       
+            menu_buscar()
+        elif(op == 4):       
+            menu_buscar_por_genero()
+        elif (op == 5):
+            menu_remover()
+        elif (op == 0):
+            run_usuario = False
+
