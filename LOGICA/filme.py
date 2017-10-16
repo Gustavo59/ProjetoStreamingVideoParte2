@@ -32,8 +32,8 @@ def remover_filme(cod):
 
 
 def iniciar_filmes():
-    adicionar_filme("Charles", "charles@gmail.com", "charles123")
-    adicionar_filme("Gustavo", "gustavo@gmail.com", "gustavo845")
-    adicionar_filme("André", "andré@gmail.com", "andre224")
-    adicionar_filme("Gabriel", "gabriel@gmail.com", "gabriel448")
+    adicionar_filme("Mulher Maravilha", "acao", 2017)
+    adicionar_filme("IT - A coisa", "terror", 2017)
+    adicionar_filme("Carros", "aventura", 2006)
+    adicionar_filme("Se beber não case", "comedia", 2009)
 

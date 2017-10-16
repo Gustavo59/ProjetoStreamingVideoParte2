@@ -30,6 +30,38 @@ def menu_buscar():
         imprimir_filme(f)
 
 
+def menu_buscar_por_genero():
+    run_generos = True
+    generos = ("\n----------------\n"+
+             "(1) Ação \n" +
+             "(2) Terror \n" +
+             "(3) Aventura \n" +
+             "(4) Comédia \n" +
+             "(0) Voltar\n"+
+            "----------------")
+    while(run_generos):
+        print (generos)
+        op = int(input("Digite sua escolha: "))
+
+        if (op == 1):
+            for f in filmes:
+                if filme[1] == "acao":
+                    print(filme)
+        elif(op == 2):
+            for f in filmes:
+                if filme[1] == "terror":
+                    print(filme)
+        elif(op == 3):       
+            for f in filmes:
+                if filme[1] == "aventura":
+                    print(filme)
+        elif(op == 4):       
+            for f in filmes:
+                if filme[1] == "comedia":
+                    print(filme)
+        elif (op == 0):
+            run_filme = False
+
 def menu_remover():
     print ("\nRemover Filme \n")
     cod = int(input("Código: "))
