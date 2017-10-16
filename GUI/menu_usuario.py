@@ -49,7 +49,7 @@ def mostrar_menu():
              "(3) Buscar Usuario por CPF \n" +
              "(4) Remover Usuario \n" +
              "(0) Voltar\n"+
-            "-----------------")
+            "----------------")
     
     while(run_usuario):
         print (menu)
