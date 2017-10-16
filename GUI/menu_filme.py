@@ -1,29 +1,33 @@
 from LOGICA import filme
 
+
 def imprimir_filme(filme):
     print("Título: ", filme[0])
     print("Gênero: ", filme[1])
     print("Ano: ", filme[2])
-
+    print()
 
 def menu_adicionar():
     print("\nAdicionar Filmes \n")
     titulo = input("Título do filme: ")
+    titulo = titulo.lower()
     genero = input("Gênero do filme: ")
+    genero = genero.lower()
     ano = int(input("Ano de lançamento do filme "))
+    filme.adicionar_filme(titulo, genero, ano)
 
 def menu_listar():
-    print("\Listar filmes ")
+    print("\nListar filmes ")
     filmes = filme.listar_filmes()
     for f in filmes:
         imprimir_filme(f)
 
    
 def menu_buscar():
-    print ("\nBuscar Filme por Código \n")
-    cod = int(input("Código: "))
+    print ("\nBuscar Filme por nome: \n")
+    nome = input("Nome do filme: ")
     print()
-    f = filme.buscar_filme(cod)
+    f = filme.buscar_filmes(nome)
     if (f == None):
         print ("Filme não encontrado no catálogo ")
     else:
@@ -31,42 +35,23 @@ def menu_buscar():
 
 
 def menu_buscar_por_genero():
-    run_generos = True
-    generos = ("\n----------------\n"+
-             "(1) Ação \n" +
-             "(2) Terror \n" +
-             "(3) Aventura \n" +
-             "(4) Comédia \n" +
-             "(0) Voltar\n"+
-            "----------------")
-    while(run_generos):
-        print (generos)
-        op = int(input("Digite sua escolha: "))
-
-        if (op == 1):
-            for f in filmes:
-                if filme[1] == "acao":
-                    print(filme)
-        elif(op == 2):
-            for f in filmes:
-                if filme[1] == "terror":
-                    print(filme)
-        elif(op == 3):       
-            for f in filmes:
-                if filme[1] == "aventura":
-                    print(filme)
-        elif(op == 4):       
-            for f in filmes:
-                if filme[1] == "comedia":
-                    print(filme)
-        elif (op == 0):
-            run_filme = False
+    genero = input("Digite o gênero desejado: ")
+    if (genero == "acao" or genero == "ação"):
+        filme.buscar_filmes_por_genero("ação")
+    elif(op == 2):
+        filme.buscar_filmes_por_genero(terror)
+    elif(op == 3):       
+        filme.buscar_filmes_por_genero(aventura)
+    elif(op == 4):       
+        filme.buscar_filmes_por_genero(comedia)
+    elif (op == 0):
+        run_filme = False
 
 def menu_remover():
     print ("\nRemover Filme \n")
-    cod = int(input("Código: "))
+    titulo = input("Título do filme: ")
     print()
-    f = filme.remover_filme(cod)
+    f = filme.remover_filme(titulo)
     if (f == False):
         print ("Filme não encontrado")
     else:
