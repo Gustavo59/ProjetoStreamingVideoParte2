@@ -48,7 +48,7 @@ def mostrar_menu():
              "(2) Listar Filmes \n" +
              "(3) Buscar Filme \n" +
              "(4) Buscar Filmes por Gênero \n" +
-             "(5) Remover Usuario \n" +
+             "(5) Remover Filme \n" +
              "(0) Voltar\n"+
             "----------------")
     
@@ -67,5 +67,5 @@ def mostrar_menu():
         elif (op == 5):
             menu_remover()
         elif (op == 0):
-            run_usuario = False
+            run_filme = False
 
