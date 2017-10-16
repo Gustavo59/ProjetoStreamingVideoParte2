@@ -40,3 +40,28 @@ def menu_remover():
         print ("Usuario não encontrado")
     else:
         print ("Usuario removido")
+
+def mostrar_menu():
+    run_usuario = True
+    menu = ("\n----------------\n"+
+             "(1) Adicionar novo Usuario \n" +
+             "(2) Listar Usuarios \n" +
+             "(3) Buscar Usuario por CPF \n" +
+             "(4) Remover Usuario \n" +
+             "(0) Voltar\n"+
+            "----------------")
+    
+    while(run_usuario):
+        print (menu)
+        op = int(input("Digite sua escolha: "))
+
+        if (op == 1):
+            menu_adicionar()
+        elif(op == 2):
+            menu_listar()
+        elif(op == 3):       
+            menu_buscar()
+        elif (op == 4):
+            menu_remover()
+        elif (op == 0):
+            run_usuario = False
