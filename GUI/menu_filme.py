@@ -35,17 +35,15 @@ def menu_buscar():
 
 
 def menu_buscar_por_genero():
+    print("Buscar filme por gênero ")
     genero = input("Digite o gênero desejado: ")
-    if (genero == "acao" or genero == "ação"):
-        filme.buscar_filmes_por_genero("ação")
-    elif(op == 2):
-        filme.buscar_filmes_por_genero(terror)
-    elif(op == 3):       
-        filme.buscar_filmes_por_genero(aventura)
-    elif(op == 4):       
-        filme.buscar_filmes_por_genero(comedia)
-    elif (op == 0):
-        run_filme = False
+    print()
+    g = filme.buscar_filmes_por_genero(genero)
+    if(g == None):
+        print("Nenhum filme do gênero desejado foi encontrado ")
+    else:
+        
+        imprimir_filme(g)
 
 def menu_remover():
     print ("\nRemover Filme \n")
