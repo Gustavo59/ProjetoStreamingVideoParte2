@@ -17,10 +17,15 @@ def buscar_filmes(cod):
     return None
 
 def buscar_filmes_por_genero(genero):
-    for f in filmes:
-        if (f[1] == genero):
-            return f
-    return None
+    retorno = []
+    for i in range(len(filmes)):
+        for j in filmes[i]:
+            if j == genero:
+                retorno.append(filmes[i][0])
+    if retorno:
+        return retorno
+    else:
+        return
 
 
 def remover_filme(titulo):

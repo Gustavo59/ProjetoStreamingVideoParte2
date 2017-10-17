@@ -10,9 +10,7 @@ def imprimir_filme(filme):
 def menu_adicionar():
     print("\nAdicionar Filmes \n")
     titulo = input("Título do filme: ")
-    titulo = titulo.lower()
     genero = input("Gênero do filme: ")
-    genero = genero.lower()
     ano = int(input("Ano de lançamento do filme "))
     filme.adicionar_filme(titulo, genero, ano)
 
@@ -39,11 +37,8 @@ def menu_buscar_por_genero():
     genero = input("Digite o gênero desejado: ")
     print()
     g = filme.buscar_filmes_por_genero(genero)
-    if(g == None):
-        print("Nenhum filme do gênero desejado foi encontrado ")
-    else:
-        
-        imprimir_filme(g)
+    for i in range(len(g)):
+        print(g[i])
 
 def menu_remover():
     print ("\nRemover Filme \n")
