@@ -37,8 +37,8 @@ def remover_filme(titulo):
 
 
 def iniciar_filmes():
-    adicionar_filme("mulher maravilha", "acao", 2017)
-    adicionar_filme("it - a coisa", "terror", 2017)
-    adicionar_filme("carros", "aventura", 2006)
-    adicionar_filme("se beber não case", "comedia", 2009)
+    adicionar_filme("Mulher Maravilha", "Ação", 2017)
+    adicionar_filme("It - A Coisa", "Terror", 2017)
+    adicionar_filme("Carros", "Aventura", 2006)
+    adicionar_filme("Se Beber Não Case", "Comédia", 2009)
 

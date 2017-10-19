@@ -2,7 +2,7 @@ from LOGICA import usuario
 
 def imprimir_usuario(usuario):
     print ("CPF: ",  usuario[0])
-    print ("Nome: ", usuario[1])
+    print ("Nome: ", usuario[1]).title()
     print ("Email: ",  usuario[2])
     print("Senha: ", usuario[3])
     print ()
@@ -10,7 +10,7 @@ def imprimir_usuario(usuario):
 def menu_adicionar():
     print ("\nAdicionar Usuarios \n")
     cpf = int(input("CPF: "))
-    nome = str (input("Nome: "))
+    nome = str (input("Nome: ")).title()
     email = str(input("Email: "))
     senha = str(input("Senha: "))
     usuario.adicionar_usuario(cpf, nome, email, senha)

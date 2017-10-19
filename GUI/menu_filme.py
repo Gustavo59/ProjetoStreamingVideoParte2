@@ -2,28 +2,28 @@ from LOGICA import filme
 
 
 def imprimir_filme(filme):
-    print("Título: ", filme[0])
-    print("Gênero: ", filme[1])
-    print("Ano: ", filme[2])
+    print("Título:", filme[0])
+    print("Gênero:", filme[1])
+    print("Ano:", filme[2])
     print()
 
 def menu_adicionar():
     print("\nAdicionar Filmes \n")
-    titulo = input("Título do filme: ")
-    genero = input("Gênero do filme: ")
-    ano = int(input("Ano de lançamento do filme "))
+    titulo = input("Título do filme: ").title()
+    genero = input("Gênero do filme: ").title()
+    ano = int(input("Ano de lançamento do filme: "))
     filme.adicionar_filme(titulo, genero, ano)
 
 def menu_listar():
-    print("\nListar filmes ")
+    print("\nListar Filmes \n")
     filmes = filme.listar_filmes()
     for f in filmes:
         imprimir_filme(f)
 
    
 def menu_buscar():
-    print ("\nBuscar Filme por nome: \n")
-    nome = input("Nome do filme: ")
+    print ("\nBuscar Filme por Nome: \n")
+    nome = input("Nome do filme: ").title()
     print()
     f = filme.buscar_filmes(nome)
     if (f == None):
@@ -33,16 +33,17 @@ def menu_buscar():
 
 
 def menu_buscar_por_genero():
-    print("Buscar filme por gênero ")
-    genero = input("Digite o gênero desejado: ")
-    print()
+    print("\nBuscar Filme por Gênero \n")
+    genero = input("Digite o gênero desejado: ").title()
+    print("\nFilmes de",genero,": \n")
     g = filme.buscar_filmes_por_genero(genero)
     for i in range(len(g)):
-        print(g[i])
+        print('Título:',g[i],'\n')
+        
 
 def menu_remover():
     print ("\nRemover Filme \n")
-    titulo = input("Título do filme: ")
+    titulo = input("Título do filme: ").title()
     print()
     f = filme.remover_filme(titulo)
     if (f == False):
