@@ -10,7 +10,7 @@ from GUI import  menu_historico
 def inicializar_dados():
     usuario.iniciar_usuarios()
     filme.iniciar_filmes()
-    historico.iniciar_historico()
+    #historico.iniciar_historico()
   
 def exibir_menu_principal():
     run_menu = True

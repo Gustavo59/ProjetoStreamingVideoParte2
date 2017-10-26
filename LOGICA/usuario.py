@@ -1,8 +1,11 @@
+from LOGICA import historico
+
 usuarios = []
 
 def adicionar_usuario(cpf, nome, email, senha):    
     usuario = [cpf, nome, email, senha]
     usuarios.append(usuario)
+    historico.historico.append([[],cpf])
     
 def listar_usuarios():
     return usuarios
@@ -21,8 +24,8 @@ def remover_usuario(cpf):
     return False        
     
 def iniciar_usuarios():
-    adicionar_usuario(11111111111, "Charles", "charles@gmail.com", "charles123")
-    adicionar_usuario(22222222222, "Gustavo", "gustavo@gmail.com", "gustavo845")
-    adicionar_usuario(33333333333, "André", "andré@gmail.com", "andre224")
-    adicionar_usuario(44444444444, "Gabriel", "gabriel@gmail.com", "gabriel448")
+    adicionar_usuario(1, "Charles", "charles@gmail.com", "charles123")
+    adicionar_usuario(2, "Gustavo", "gustavo@gmail.com", "gustavo845")
+    adicionar_usuario(3, "André", "andré@gmail.com", "andre224")
+    adicionar_usuario(4, "Gabriel", "gabriel@gmail.com", "gabriel448")
     
