@@ -1,11 +1,8 @@
-from LOGICA import historico
-
 usuarios = []
 
 def adicionar_usuario(cpf, nome, email, senha):    
     usuario = [cpf, nome, email, senha]
     usuarios.append(usuario)
-    historico.historico.append([[],cpf])
     
 def listar_usuarios():
     return usuarios

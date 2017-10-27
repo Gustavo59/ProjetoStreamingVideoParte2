@@ -1,17 +1,21 @@
-import filme
-import usuario
+from LOGICA import usuario
+from LOGICA import filme
+
 
 historico = []
 
 def registrar_filme_assistido(titulo, cpf):
-    for f in filme.filmes:
-        if titulo == f[0]:
-            for u in usuario.usuarios:
-                if u[0] == cpf:
-                    for h in historico:                        
-                        if cpf == h[1]:
-                            h[0].append(titulo)
-                            return
+    f = filme.buscar_filmes(titulo)
+    u = usuario.buscar_usuario(cpf)
+
+    if (f != None) and (u !=  None):
+        for h in historico:
+            if h[1] == cpf:
+                h[0].append(titulo)
+                return
+        historico.append([[],cpf])
+        historico[0].append(titulo)
+            
     
             
 
