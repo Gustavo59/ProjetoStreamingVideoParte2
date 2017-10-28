@@ -1,5 +1,10 @@
 from LOGICA import historico
 
+def imprimir_filme(assistidos):
+    for a in assistidos:
+        print("Titulo:",a)
+    
+
 def menu_registrar():
     print("\nAdicionar Filme Assistido no seu Histórico \n")
     titulo = input("Título do filme: ").title()
@@ -11,8 +16,7 @@ def menu_listar():
     cpf = int(input("Digite seu CPF: "))
     print()
     assistidos = historico.listar_filmes_assistidos(cpf)
-    for a in assistidos:
-        print("Titulo:",a)
+    imprimir_filme(assistidos)
 
 def mostrar_menu():
     run_historico = True
