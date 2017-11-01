@@ -16,9 +16,9 @@ def registrar_filme_assistido(titulo, cpf):
 def listar_filmes_assistidos(cpf):
     for h in historico:
         if cpf == h[1]:
-            return h[0]
+            return h[0] 
         
-    print("CPF não encontrado em nosso banco de dados ")
+    print("Nenhum filme assistido na conta informada ")
     return False
 
 

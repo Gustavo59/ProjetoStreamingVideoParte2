@@ -8,7 +8,7 @@ def assistir_filme(titulo, cpf):
 
     if (f != None) and (u !=  None):
         historico.registrar_filme_assistido(f[0],u[0])
-        print(" --------------------------------- ")
+        print("  -------------------------------- ")
         print(" |                                |")
         print(" |                                |")
         print(" |                                |")
@@ -21,7 +21,7 @@ def assistir_filme(titulo, cpf):
         print(" |                                |")
         print(" |                                |")
         print(" |                                |")
-        print(" --------------------------------- ")
+        print("  -------------------------------- ")
         print("\nVocê assistiu o filme",f[0],"!")
         print("Continue assitindo mais filmes de nosso catalogo!")
         return
@@ -34,4 +34,4 @@ def assistir_filme(titulo, cpf):
         print("\nUsuario Não Encontrado no Banco de Dados")
         return
 
-    print("\nFilme e Usuario Não Encontrado no Banco de Dados")
+    print("\nFilme e Usuario Não Encontrados no Banco de Dados")
