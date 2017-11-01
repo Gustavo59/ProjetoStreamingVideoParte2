@@ -4,9 +4,12 @@ from GUI import  menu_filme
 from LOGICA import usuario
 from GUI import  menu_usuario
 
+from LOGICA import historico
 from GUI import  menu_historico
 
 from GUI import menu_player
+
+from GUI import  menu_interesse
 
 def inicializar_dados():
     usuario.iniciar_usuarios()
@@ -22,6 +25,7 @@ def exibir_menu_principal():
              "(2) Menu Filme \n" +
              "(3) Menu Historico \n" +
              "(4) Menu Player \n" +
+             "(5) Menu Lista Interesse \n" +
              "(0) Sair\n"+
             "----------------")
     
@@ -36,8 +40,10 @@ def exibir_menu_principal():
             menu_filme.mostrar_menu()
         elif(op == 3):            
             menu_historico.mostrar_menu()
-        elif(op == 4):
+        elif(op == 4):            
             menu_player.mostrar_menu()
+        elif(op == 5):
+            menu_interesse.mostrar_menu()
         elif (op == 0):
             print ("Saindo do programa...")
             run_menu = False
