@@ -17,11 +17,14 @@ class Teste(unittest.TestCase):
         self.assertEqual(6,len(usuario.usuarios))
 
     def test_remove_usuario(self):
-        usuario.remover_usuario(11111111111)
+        usuario.remover_usuario(1)
         self.assertEqual(3,len(usuario.usuarios))
 
     def test_buscar_usuario(self):
-        self.assertEqual([33333333333, "André", "andré@gmail.com", "andre224"], usuario.buscar_usuario(33333333333))
+        self.assertEqual([3, "André", "andré@gmail.com", "andre224"], usuario.buscar_usuario(3))
+
+    def test_listar_usuario(self):
+        self.assertEqual(len(usuario.usuarios),4)
 
 
 if __name__ == '__main__':
